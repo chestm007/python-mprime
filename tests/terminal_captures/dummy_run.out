@@ -1,0 +1,179 @@
+[Main thread Apr 17 22:47] Starting workers.
+[Worker #2 Apr 17 22:47] Worker starting
+[Worker #3 Apr 17 22:47] Worker starting
+[Worker #11 Apr 17 22:47] Worker starting
+[Worker #14 Apr 17 22:47] Worker starting
+[Worker #6 Apr 17 22:47] Worker starting
+[Worker #7 Apr 17 22:47] Worker starting
+[Worker #8 Apr 17 22:47] Worker starting
+[Worker #9 Apr 17 22:47] Worker starting
+[Worker #10 Apr 17 22:47] Worker starting
+[Worker #2 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #2 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #12 Apr 17 22:47] Worker starting
+[Worker #13 Apr 17 22:47] Worker starting
+[Worker #12 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #12 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #15 Apr 17 22:47] Worker starting
+[Worker #11 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #11 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #16 Apr 17 22:47] Worker starting
+[Worker #14 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #14 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #7 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #7 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #9 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #9 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #4 Apr 17 22:47] Worker starting
+[Worker #3 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #3 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #5 Apr 17 22:47] Worker starting
+[Worker #15 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #15 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #16 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #16 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #8 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #8 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #13 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #13 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #1 Apr 17 22:47] Worker starting
+[Worker #6 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #6 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #5 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #5 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #10 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #10 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #1 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #1 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #4 Apr 17 22:47] Beginning a continuous self-test on your computer.
+[Worker #4 Apr 17 22:47] Please read stress.txt.  Hit ^C to end this test.
+[Worker #14 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #9 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #7 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #2 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #6 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #1 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #16 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #10 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #5 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #8 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #15 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #11 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #12 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #3 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #13 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #4 Apr 17 22:47] Test 1, 52000 Lucas-Lehmer iterations of M6225921 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #13 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #15 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #14 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #3 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #16 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #8 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #7 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #4 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #10 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #5 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #6 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #2 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #1 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #9 Apr 17 22:52] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #12 Apr 17 22:53] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #11 Apr 17 22:53] Test 2, 52000 Lucas-Lehmer iterations of M6225919 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #13 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #3 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #14 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #15 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #4 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #16 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #8 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #5 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #1 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #6 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #7 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #10 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #2 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #9 Apr 17 22:57] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #12 Apr 17 22:58] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #11 Apr 17 22:58] Test 3, 52000 Lucas-Lehmer iterations of M6198241 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #13 Apr 17 23:01] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #14 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #3 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #15 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #4 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #16 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #8 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #1 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #7 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #2 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #6 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #5 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #10 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #9 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #12 Apr 17 23:02] Test 4, 52000 Lucas-Lehmer iterations of M6098239 using FMA3 FFT length 320K, Pass1=320, Pass2=1K, clm=1.
+[Worker #11 Apr 17 23:02] Self-test 320K passed!
+[Worker #11 Apr 17 23:02] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #13 Apr 17 23:06] Self-test 320K passed!
+[Worker #13 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #14 Apr 17 23:06] Self-test 320K passed!
+[Worker #14 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #15 Apr 17 23:06] Self-test 320K passed!
+[Worker #15 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #3 Apr 17 23:06] Self-test 320K passed!
+[Worker #3 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #4 Apr 17 23:06] Self-test 320K passed!
+[Worker #4 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #16 Apr 17 23:06] Self-test 320K passed!
+[Worker #16 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #8 Apr 17 23:06] Self-test 320K passed!
+[Worker #8 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #2 Apr 17 23:06] Self-test 320K passed!
+[Worker #2 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #7 Apr 17 23:06] Self-test 320K passed!
+[Worker #7 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #1 Apr 17 23:06] Self-test 320K passed!
+[Worker #1 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #5 Apr 17 23:06] Self-test 320K passed!
+[Worker #5 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #9 Apr 17 23:06] Self-test 320K passed!
+[Worker #9 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #6 Apr 17 23:06] Self-test 320K passed!
+[Worker #6 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #10 Apr 17 23:06] Self-test 320K passed!
+[Worker #10 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Worker #12 Apr 17 23:06] Self-test 320K passed!
+[Worker #12 Apr 17 23:06] Test 1, 3200000 Lucas-Lehmer iterations of M172031 using FMA3 FFT length 8K, Pass1=128, Pass2=64, clm=2.
+[Main thread Apr 17 23:06] Stopping all worker threads.
+[Worker #3 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #3 Apr 17 23:06] Worker stopped.
+[Worker #7 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #7 Apr 17 23:06] Worker stopped.
+[Worker #11 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #11 Apr 17 23:06] Worker stopped.
+[Worker #1 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #1 Apr 17 23:06] Worker stopped.
+[Worker #13 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #13 Apr 17 23:06] Worker stopped.
+[Worker #4 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #4 Apr 17 23:06] Worker stopped.
+[Worker #16 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #16 Apr 17 23:06] Worker stopped.
+[Worker #8 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #8 Apr 17 23:06] Worker stopped.
+[Worker #12 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #12 Apr 17 23:06] Worker stopped.
+[Worker #6 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #6 Apr 17 23:06] Worker stopped.
+[Worker #15 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #15 Apr 17 23:06] Worker stopped.
+[Worker #9 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #9 Apr 17 23:06] Worker stopped.
+[Worker #5 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #5 Apr 17 23:06] Worker stopped.
+[Worker #2 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #2 Apr 17 23:06] Worker stopped.
+[Worker #10 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #10 Apr 17 23:06] Worker stopped.
+[Worker #14 Apr 17 23:06] Torture Test completed 0 tests in 0 minutes - 0 errors, 0 warnings.
+[Worker #14 Apr 17 23:06] Worker stopped.
+[Main thread Apr 17 23:06] Execution halted.
+

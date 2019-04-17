@@ -1,0 +1,17 @@
+os: linux
+dist: xenial
+group: stable
+language: python
+before_install:
+  - sudo apt-get update
+  - wget http://mersenneforum.org/gimps/mprime276-linux64.tar.gz
+  - tar -xvf mprime276-linux64.tar.gz
+  - sudo ln -s $(pwd)/mprime/mprime /usr/bin/mprime
+python:
+  - '3.7'
+  - '3.6'
+install:
+  - sed -i "s/PROJECTVERSION/`python get_build_version.py`/g" setup.py
+  - pip3 install .
+script:
+- echo "need to run tests here instead of echoing as its UNRELIABLE"<Paste>
