@@ -31,5 +31,5 @@ class TestIntegration(unittest.TestCase):
         self.assertLess(time.time() - pre_stop_time, 2)
         self.assertEqual(mprime.status, Statuses.stopped)
 
-        self.assertEqual(len(uncaught_output), 0)
+        self.assertEqual(len(uncaught_output), 0, uncaught_output)
 

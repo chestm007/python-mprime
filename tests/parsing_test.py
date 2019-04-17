@@ -78,11 +78,12 @@ class TestParsing(unittest.TestCase):
         )
 
         expected_ini_string = (
-            'a=1\n'
-            'b=2\n'
-            'd=123123\n'
-            'e=False\n'
-            'abcde=False'
+            'a=1',
+            'b=2',
+            'd=123123',
+            'e=False',
+            'abcde=False',
         )
 
-        self.assertEqual(generated_ini_string, expected_ini_string)
+        for line in expected_ini_string:
+            self.assertIn(line, generated_ini_string)

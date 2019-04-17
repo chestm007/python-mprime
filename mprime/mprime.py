@@ -227,9 +227,11 @@ class MPrime:
                     worker.status = Statuses.starting
                     self.handlers['on_worker_start'](worker)
                     continue
-                elif 'Beginning a continuous self-test on your computer.' in line:
+                elif 'Beginning a continuous self-test' in line:
                     continue
                 elif 'Please read stress.txt.  Hit ^C to end this test.' in line:
+                    continue
+                elif 'Setting affinity' in line:
                     continue
                 elif 'Lucas-Lehmer iterations' in line:  # beginning of a task
                     worker.add_test(line.strip('.').split('Test')[-1].split())
