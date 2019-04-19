@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/chestm007/python-mprime.svg?style=svg)](https://circleci.com/gh/chestm007/python-mprime)  
+
 # What is it
 pretty simple and straightforward (I hope) wrapper around the mprime binary 
  
