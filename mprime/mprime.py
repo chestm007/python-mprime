@@ -5,45 +5,47 @@ from subprocess import Popen, PIPE
 from threading import Thread
 from typing import List, Union
 
-SMALLEST_FFTS = dict(
-    StressTester=1,
-    UsePrimenet=0,
-    MinTortureFFT=4,  # in K
-    MaxTortureFFT=13,  # in K
-    TortureMem=0,  # in MiB. value is per thread if 8 or less, torture test does FFTs in-place
-    TortureTime=6,  # in minutes
-    TortureThreads=None,  # if None detect automatically
-)
 
-SMALL_FFTS = dict(
-    StressTester=1,
-    UsePrimenet=0,
-    MinTortureFFT=22,  # in K
-    MaxTortureFFT=85,  # in K
-    TortureMem=0,  # in MiB. value is per thread if 8 or less, torture test does FFTs in-place
-    TortureTime=6,  # in minutes
-    TortureThreads=None,  # if None detect automatically
-)
+class CONFIGURATIONS:
+    SMALLEST_FFTS = dict(
+        StressTester=1,
+        UsePrimenet=0,
+        MinTortureFFT=4,  # in K
+        MaxTortureFFT=13,  # in K
+        TortureMem=0,  # in MiB. value is per thread if 8 or less, torture test does FFTs in-place
+        TortureTime=6,  # in minutes
+        TortureThreads=None,  # if None detect automatically
+    )
 
-LARGE_FFTS = dict(
-    StressTester=1,
-    UsePrimenet=0,
-    MinTortureFFT=146,  # in K
-    MaxTortureFFT=8192,  # in K
-    TortureMem=29461,  # in MiB. value is per thread if 8 or less, torture test does FFTs in-place
-    TortureTime=6,  # in minutes
-    TortureThreads=None,  # if None detect automatically
-)
+    SMALL_FFTS = dict(
+        StressTester=1,
+        UsePrimenet=0,
+        MinTortureFFT=22,  # in K
+        MaxTortureFFT=85,  # in K
+        TortureMem=0,  # in MiB. value is per thread if 8 or less, torture test does FFTs in-place
+        TortureTime=6,  # in minutes
+        TortureThreads=None,  # if None detect automatically
+    )
 
-BLEND = dict(
-    StressTester=1,
-    UsePrimenet=0,
-    MinTortureFFT=4,  # in K
-    MaxTortureFFT=8192,  # in K
-    TortureMem=29461,  # in MiB. value is per thread if 8 or less, torture test does FFTs in-place
-    TortureTime=6,  # in minutes
-    TortureThreads=None,  # if None detect automatically
-)
+    LARGE_FFTS = dict(
+        StressTester=1,
+        UsePrimenet=0,
+        MinTortureFFT=146,  # in K
+        MaxTortureFFT=8192,  # in K
+        TortureMem=29461,  # in MiB. value is per thread if 8 or less, torture test does FFTs in-place
+        TortureTime=6,  # in minutes
+        TortureThreads=None,  # if None detect automatically
+    )
+
+    BLEND = dict(
+        StressTester=1,
+        UsePrimenet=0,
+        MinTortureFFT=4,  # in K
+        MaxTortureFFT=8192,  # in K
+        TortureMem=29461,  # in MiB. value is per thread if 8 or less, torture test does FFTs in-place
+        TortureTime=6,  # in minutes
+        TortureThreads=None,  # if None detect automatically
+    )
 
 
 Statuses = Enum("STATUSES", "stopped starting running passed failed stopping")
@@ -176,7 +178,7 @@ class MPrime:
         self.status = Statuses.stopped
         self.workers = {}
 
-        self.config = BLEND
+        self.config = CONFIGURATIONS.BLEND
         if prime_config is not None:
             self.config.update(prime_config)
 
