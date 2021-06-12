@@ -16,15 +16,15 @@ default_prime_config = dict(
 )
 
 
-Statuses = Enum('STATUSES', 'stopped starting running passed failed stopping')
+Statuses = Enum("STATUSES", "stopped starting running passed failed stopping")
 
 
 def mk_esc(esc_chars):
-    return lambda s: ''.join(['' if c in esc_chars else c for c in s])
+    return lambda s: "".join(["" if c in esc_chars else c for c in s])
 
 
 class DataSize:
-    unit_string = 'TGMKB'
+    unit_string = "TGMKB"
 
     def __init__(self, size: Union[int, str]):
         self.value = self._parse_string(size)
@@ -48,8 +48,16 @@ class DataSize:
 
 
 class Test:
-    def __init__(self, test: int, num_iterations: int, thing: str, using: str,
-                 length: str, passes: list = None, clm=None):
+    def __init__(
+        self,
+        test: int,
+        num_iterations: int,
+        thing: str,
+        using: str,
+        length: str,
+        passes: list = None,
+        clm=None,
+    ):
         self.status = Statuses.running
         self.test = test
         self.num_iterations = num_iterations
@@ -86,6 +94,7 @@ class Worker:
         Torture Test completed 1 tests in 10 minutes - 1 errors, 0 warnings.
         Worker stopped.
     """
+
     def __init__(self, number: int):
         self.number = number
         self.tests = []  # type: [Test, ...]
@@ -98,18 +107,24 @@ class Worker:
         parse a line of output representing a test start and add it to the workers list of tests
         """
         # TODO: replace this horrendous hack.
-        test, num_iterations, _, _, _, thing, _, using_a, using_b, _, length, *args = [i.strip(',') for i in chunked_line]
+        test, num_iterations, _, _, _, thing, _, using_a, using_b, _, length, *args = [
+            i.strip(",") for i in chunked_line
+        ]
         if args:
             clm = args.pop(-1)
         test_obj_params = [
-            test, num_iterations, thing, '{} {}'.format(using_a, using_b), DataSize(length)
+            test,
+            num_iterations,
+            thing,
+            "{} {}".format(using_a, using_b),
+            DataSize(length),
         ] + ([[args], clm] if args else [])
         self.tests.append(Test(*test_obj_params))
         self.status = Statuses.running
 
 
 class MPrime:
-    executable = 'mprime'
+    executable = "mprime"
 
     handlers = dict(
         on_worker_pass=lambda w: w,
@@ -118,10 +133,12 @@ class MPrime:
         on_worker_add=lambda w: w,
         on_test_complete=lambda w: w,
         on_test_start=lambda w: w,
-        on_uncaught_output=lambda o: print('uncaught output: {}'.format(o))
+        on_uncaught_output=lambda o: print("uncaught output: {}".format(o)),
     )
 
-    def __init__(self, prime_config: dict = None, working_directory: str = '/tmp/mprime'):
+    def __init__(
+        self, prime_config: dict = None, working_directory: str = "/tmp/mprime"
+    ):
         self.mprime = None  # type: Popen
         self.output_thread = None
         self.start_time = None
@@ -140,20 +157,30 @@ class MPrime:
 
     def launch_mprime(self):
         self._write_prime_txt()
-        self.mprime = Popen([self.executable, '-t'], stdout=PIPE, stderr=PIPE, stdin=PIPE)
+        self.mprime = Popen(
+            [self.executable, "-t"], stdout=PIPE, stderr=PIPE, stdin=PIPE
+        )
         self.start_time = time.time()
 
-        self.output_thread = Thread(target=self._consume_mprime_output, args=(self.mprime.stdout, ))
+        self.output_thread = Thread(
+            target=self._consume_mprime_output, args=(self.mprime.stdout,)
+        )
         self.output_thread.daemon = True  # thread dies with the program
         self.output_thread.start()
 
     def statusline(self):
-        output_format = 'Status: {status}, Workers: ({workers_summary}), Time elapsed: {time_elapsed}'
-        workers_summary = '#:{num_workers}, R:{failed_workers}'.format(
+        output_format = "Status: {status}, Workers: ({workers_summary}), Time elapsed: {time_elapsed}"
+        workers_summary = "#:{num_workers}, R:{failed_workers}".format(
             num_workers=len(self.workers),
-            failed_workers=len([w for w in self.workers.values() if w.status == Statuses.running])
+            failed_workers=len(
+                [w for w in self.workers.values() if w.status == Statuses.running]
+            ),
         )
-        return output_format.format(status=self.status, workers_summary=workers_summary, time_elapsed=self.time_elapsed)
+        return output_format.format(
+            status=self.status,
+            workers_summary=workers_summary,
+            time_elapsed=self.time_elapsed,
+        )
 
     def __del__(self):
         """
@@ -197,89 +224,95 @@ class MPrime:
         """
         daemon function to consume and operate on subprocess output
         """
-        for binary_line in iter(out.readline, b''):
-            line = binary_line.decode().rstrip('\n')
+        for binary_line in iter(out.readline, b""):
+            line = binary_line.decode().rstrip("\n")
             if not line:
                 continue
 
-            if line.startswith('[Main thread'):
-                if 'Starting workers' in line:
+            if line.startswith("[Main thread"):
+                if "Starting workers" in line:
                     self.status = Statuses.running
                     continue
-                elif 'Stopping all worker threads' in line:
+                elif "Stopping all worker threads" in line:
                     self.status = Statuses.stopping
-                    for worker in filter(lambda w: w.status != Statuses.failed, self.workers.values()):
+                    for worker in filter(
+                        lambda w: w.status != Statuses.failed, self.workers.values()
+                    ):
                         worker.status = Statuses.stopping
                     continue
-                elif 'Execution halted.' in line:
+                elif "Execution halted." in line:
                     continue
 
-            elif line.startswith('[Worker'):
-                worker_number = int(line.split()[1].strip('#'))
+            elif line.startswith("[Worker"):
+                worker_number = int(line.split()[1].strip("#"))
                 if not self.workers.get(worker_number):
                     worker = Worker(worker_number)
                     self.workers[worker_number] = worker
-                    self.handlers['on_worker_add'](worker)
+                    self.handlers["on_worker_add"](worker)
                 else:
                     worker = self.workers[worker_number]
 
-                if 'Worker starting' in line:
+                if "Worker starting" in line:
                     worker.status = Statuses.starting
-                    self.handlers['on_worker_start'](worker)
+                    self.handlers["on_worker_start"](worker)
                     continue
-                elif 'Beginning a continuous self-test' in line:
+                elif "Beginning a continuous self-test" in line:
                     continue
-                elif 'Please read stress.txt.  Hit ^C to end this test.' in line:
+                elif "Please read stress.txt.  Hit ^C to end this test." in line:
                     continue
-                elif 'Setting affinity' in line:
+                elif "Setting affinity" in line:
                     continue
-                elif 'Lucas-Lehmer iterations' in line:  # beginning of a task
-                    worker.add_test(line.strip('.').split('Test')[-1].split())
-                    self.handlers['on_test_start'](worker)
+                elif "Lucas-Lehmer iterations" in line:  # beginning of a task
+                    worker.add_test(line.strip(".").split("Test")[-1].split())
+                    self.handlers["on_test_start"](worker)
                     continue
-                elif 'Self-test' in line and 'passed' in line:
-                    test_length = DataSize(line.split('Self-test')[-1].split()[0])
+                elif "Self-test" in line and "passed" in line:
+                    test_length = DataSize(line.split("Self-test")[-1].split()[0])
                     if worker.tests[-1].length == test_length:
                         worker.tests[-1].status = Statuses.passed
-                        self.handlers['on_worker_pass'](worker)
+                        self.handlers["on_worker_pass"](worker)
                         continue
                     else:
                         print(worker.tests[-1].length, test_length)
-                elif 'Worker stopped' in line:
+                elif "Worker stopped" in line:
                     worker.status = Statuses.stopped
                     continue
                 # handle failed tests and update objects as messages come in
-                elif 'FATAL ERROR:' in line:
+                elif "FATAL ERROR:" in line:
                     worker.tests[-1].status = Statuses.failed
                     continue
-                elif 'Hardware failure detected,' in line:
-                    worker.tests[-1].status_reason = 'hardware failure'
-                    worker.status_reason = 'hardware failure'
-                    self.handlers['on_worker_fail'](worker)
+                elif "Hardware failure detected," in line:
+                    worker.tests[-1].status_reason = "hardware failure"
+                    worker.status_reason = "hardware failure"
+                    self.handlers["on_worker_fail"](worker)
                     continue
-                elif 'Torture Test completed' in line:
-                    worker.summary = line.split('Torture Test')[-1].strip()
-                    self.handlers['on_test_complete'](worker)
+                elif "Torture Test completed" in line:
+                    worker.summary = line.split("Torture Test")[-1].strip()
+                    self.handlers["on_test_complete"](worker)
                     continue
 
-            self.handlers['on_uncaught_output'](line)
+            self.handlers["on_uncaught_output"](line)
 
         out.close()
         self.stop_time = time.time()
 
     def _write_prime_txt(self):
-        with open('prime.txt', 'w+') as f:
-            f.write(self.dict_to_ini(self.config) + '\n')
+        with open("prime.txt", "w+") as f:
+            f.write(self.dict_to_ini(self.config) + "\n")
 
     @staticmethod
     def dict_to_ini(in_dict: dict) -> str:
-        return '\n'.join('{}={}'.format(k, v) for k, v in in_dict.items() if v is not None)
+        return "\n".join(
+            "{}={}".format(k, v) for k, v in in_dict.items() if v is not None
+        )
 
 
 def main():
     mprime = MPrime()
-    mprime.handlers['on_test_start'] = lambda w: print(mprime.statusline())
-    mprime.handlers['on_test_complete'] = lambda w: print('worker {}: {}'.format(w.number, w.summary))
+    mprime.handlers["on_test_start"] = lambda w: print(mprime.statusline())
+    mprime.handlers["on_test_complete"] = lambda w: print(
+        "worker {}: {}".format(w.number, w.summary)
+    )
     mprime.launch_mprime()
     try:
         while mprime.running:
@@ -289,5 +322,5 @@ def main():
     mprime.stop()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
