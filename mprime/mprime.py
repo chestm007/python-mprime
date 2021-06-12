@@ -3,6 +3,7 @@ import time
 from enum import Enum
 from subprocess import Popen, PIPE
 from threading import Thread
+from typing import List, Union
 
 SMALLEST_FFTS = dict(
     StressTester=1,
@@ -126,12 +127,12 @@ class Worker:
 
     def __init__(self, number: int):
         self.number = number
-        self.tests = []  # type: [Test, ...]
-        self.status = None  # type: Statuses
+        self.tests: List[Test] = []
+        self.status: Union[Statuses, None] = None
         self.status_reason = None
         self.summary = None
 
-    def add_test(self, chunked_line: [str]):
+    def add_test(self, chunked_line: List[str]):
         """
         parse a line of output representing a test start and add it to the workers list of tests
         """
