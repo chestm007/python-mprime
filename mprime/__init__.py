@@ -1,1 +1,1 @@
-from .mprime import MPrime, CONFIGURATIONS
+from .mprime import MPrime, Worker, Test, CONFIGURATIONS
