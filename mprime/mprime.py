@@ -134,14 +134,62 @@ class Worker:
         self.status_reason = None
         self.summary = None
 
+    @staticmethod
+    def __chunked_line_parser(chunked_line: List[str]):
+        test = chunked_line.pop(0).strip(",")
+        num_iterations = chunked_line.pop(0)
+        test_name = chunked_line.pop(0)
+        _filler_iterations = chunked_line.pop(0)
+        _filler_of = chunked_line.pop(0)
+        thing = chunked_line.pop(0)
+
+        using_a = using_b = type_num = type_name = length = None
+
+        if "using" in chunked_line[0]:
+            _filler_using = chunked_line.pop(0)
+            using_a = chunked_line.pop(0)
+            using_b = chunked_line.pop(0)
+        else:
+            raise RuntimeError("Unexpected property in Test case")
+
+        if "type-" in chunked_line[0]:
+            type_num = chunked_line.pop(0)
+
+        type_name = chunked_line.pop(0)
+
+        if "length" in chunked_line[0]:
+            _filler_length = chunked_line.pop(0)
+            length = chunked_line.pop(0).strip(",")
+
+        chunked_line = [i.strip(",") for i in chunked_line]
+
+        return (
+            test,
+            num_iterations,
+            thing,
+            using_a,
+            using_b,
+            type_num,
+            type_name,
+            length,
+            chunked_line,
+        )
+
     def add_test(self, chunked_line: List[str]):
         """
         parse a line of output representing a test start and add it to the workers list of tests
         """
-        # TODO: replace this horrendous hack.
-        test, num_iterations, _, _, _, thing, _, using_a, using_b, _, length, *args = [
-            i.strip(",") for i in chunked_line
-        ]
+        (
+            test,
+            num_iterations,
+            thing,
+            using_a,
+            using_b,
+            _,
+            _,
+            length,
+            args,
+        ) = self.__chunked_line_parser(chunked_line)
         if args:
             clm = args.pop(-1)
         test_obj_params = [
