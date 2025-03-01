@@ -16,7 +16,7 @@ setup(
     maintainer_email="chestm007@hotmail.com",
     description="mprime wrapper",
     long_description=readme,
-    install_requires=[],
+    install_requires=["psutil==5.8.0"],
     entry_points="""
         [console_scripts]
         python-mprime=mprime.mprime:main
