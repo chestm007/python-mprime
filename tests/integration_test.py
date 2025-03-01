@@ -5,7 +5,6 @@ from mprime.mprime import MPrime, Statuses
 
 
 class TestIntegration(unittest.TestCase):
-
     def test_process_works(self):
         num_threads = 2
         config = dict(
@@ -13,12 +12,12 @@ class TestIntegration(unittest.TestCase):
             TortureTime=0.2,
             TortureMem=4,
             MaxTortureFFT=128,
-            MinTortureFFT=2
+            MinTortureFFT=2,
         )
 
         mprime = MPrime(config)
         uncaught_output = []
-        mprime.handlers['on_uncaught_output'] = lambda o: uncaught_output.append(o)
+        mprime.handlers["on_uncaught_output"] = lambda o: uncaught_output.append(o)
 
         mprime.launch_mprime()
         time.sleep(30)
@@ -32,4 +31,3 @@ class TestIntegration(unittest.TestCase):
         self.assertEqual(mprime.status, Statuses.stopped)
 
         self.assertEqual(len(uncaught_output), 0, uncaught_output)
-
